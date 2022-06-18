@@ -8,7 +8,7 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
@@ -22,7 +22,10 @@
       "@contracts/*": ["src/contracts/*"],
       "@hooks/*": ["src/hooks/*"],
       "@reusables/*": ["src/components/Reusables/*"]
-    }
+    },
+    "skipLibCheck": true,
+    "noEmit": true,
+    "module": "esnext"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
