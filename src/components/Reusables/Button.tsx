@@ -6,6 +6,7 @@ import type * as Stitches from "@stitches/react";
 type MyButtonTypes = Stitches.VariantProps<typeof ButtonTypes>;
 
 interface ButtonProps {
+  id?: string;
   onClick?: () => void;
   disabled?: boolean;
   children?: React.ReactNode;
@@ -56,6 +57,7 @@ const ButtonTypes = css("button", {
 });
 
 export function Button({
+  id,
   size,
   bgColor,
   color,
@@ -118,6 +120,7 @@ export function Button({
 
   return (
     <Button
+      id={id}
       size={size}
       bgColor={bgColor}
       color={color}

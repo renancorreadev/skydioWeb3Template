@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useWeb3React } from "@web3-react/core";
 import { UserRejectedRequestError } from "@web3-react/injected-connector";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { injected } from "@utils/connectors";
 import useENSName from "@hooks/useENSName";
 import useMetaMaskOnboarding from "@hooks/useMetaMaskOnboarding";
@@ -59,6 +59,7 @@ export const WalletConnect = () => {
       <>
         {isWeb3Available ? (
           <Button
+            id="wallet-connect"
             color="white"
             bgColor="purple"
             disabled={connecting}
@@ -67,7 +68,12 @@ export const WalletConnect = () => {
             {metamaskInstalled}
           </Button>
         ) : (
-          <Button color="white" bgColor="purple" onClick={startOnboarding}>
+          <Button
+            id="wallet-connect"
+            color="white"
+            bgColor="purple"
+            onClick={startOnboarding}
+          >
             {metamaskInstalled}
           </Button>
         )}
@@ -77,8 +83,10 @@ export const WalletConnect = () => {
 
   return (
     <Button
+      id="wallet-connect"
       color="white"
       bgColor="purple"
+      className="wallet-connect"
       {...{
         //@ts-ignore
         href: formatEtherscanLink("Account", [chainId, account]),
