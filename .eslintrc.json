@@ -2,7 +2,8 @@
   "extends": [
     "plugin:prettier/recommended",
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["prettier", "@typescript-eslint"],
@@ -10,6 +11,11 @@
     "quotes": ["error", "double"],
     "prettier/prettier": "error",
     "arrow-body-style": "off",
-    "prefer-arrow-callback": "off"
+    "prefer-arrow-callback": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
+  },
+  "settings": {
+    "react": { "version": "detect" }
   }
 }

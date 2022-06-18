@@ -1,18 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["cypress"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
@@ -24,7 +23,10 @@
       "@contracts/*": ["src/contracts/*"],
       "@hooks/*": ["src/hooks/*"],
       "@reusables/*": ["src/components/Reusables/*"]
-    }
+    },
+    "skipLibCheck": true,
+    "noEmit": true,
+    "module": "esnext"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
