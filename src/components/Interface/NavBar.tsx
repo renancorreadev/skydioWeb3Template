@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import React from "react";
 import { WalletConnect } from "@reusables/WalletConnect";
 import { styled } from "@stitches/react";
 import { usePublicCalls } from "@/hooks/usePublicCalls";

@@ -1,0 +1,16 @@
+import { expect } from "@jest/globals";
+import { usePublicCall_Test } from "./usePublicCalls_test_";
+
+const mockSetState = jest.fn();
+
+jest.mock("react", () => ({
+  useState: (initial: any) => [initial, mockSetState],
+}));
+
+test("Can value is CBR NFT", () => {
+  const { contractName } = usePublicCall_Test();
+
+  contractName();
+
+  expect(mockSetState).toHaveBeenCalledWith("CBR NFT");
+});

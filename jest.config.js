@@ -5,5 +5,5 @@ module.exports = {
     "\\.(scss|sass|css)$": "identity-obj-proxy",
   },
   testEnvironment: "jest-environment-jsdom",
-  moduleDirectories: ["node_modules", "src"],
+  moduleDirectories: ["node_modules", "src", "@contracts/*", "src/contracts/*"],
 };

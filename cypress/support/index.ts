@@ -1,4 +1,3 @@
-import "cypress-metamask";
 export interface TypeOptions extends Cypress.TypeOptions {
   sensitive: boolean;
 }

@@ -6,7 +6,7 @@ import { Navbar } from "@components/Interface/NavBar";
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar />;
+      <Navbar />
     </>
   );
 };
